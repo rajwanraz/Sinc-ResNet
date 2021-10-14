@@ -1,0 +1,22 @@
+# data
+data:
+  timit:
+    path: datasets/timit
+    n_classes: 462
+
+# all null values will be filled according to models type
+#model:
+#  type: cnn
+#  pretrained: null 
+
+#d_vectors:
+#  imposters: null
+#  speakers: null
+
+# sound
+sample_rate: 16000
+chunk_len_ratio: 0.2
+chunk_shift_ratio: 0.01
+
+# other
+device: 'cuda:0'

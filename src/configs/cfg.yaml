@@ -1,0 +1,27 @@
+# data
+data:
+  timit:
+    path: datasets/timit
+    n_classes: 462
+
+# model
+model:
+  type: resincNet ## option are "mfcc,cnn,sinc,resincNet", mfcc=>mfcc with cnn ,sinc->sincNet, cnn->regular cnn,resincNet our architcture.
+  # pretrain: "model/sinc.pt"
+  pretrain: null
+
+# sound
+sample_rate: 16000
+chunk_len_ratio: 0.2
+chunk_shift_ratio: 0.01
+
+# optimization
+lr: 0.001
+batch_size: 128
+n_epochs: 2000 #1500
+
+# other
+device: "cuda:0"
+verbose_every: 100
+save_path: "model/"
+use_wandb: false
